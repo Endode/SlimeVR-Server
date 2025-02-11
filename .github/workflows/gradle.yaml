@@ -146,7 +146,7 @@ jobs:
   bundle-linux:
     runs-on: ubuntu-24.04
     needs: [build, test]
-    if: contains(fromJSON('["workflow_dispatch", "create"]'), github.event_name)
+    # if: contains(fromJSON('["workflow_dispatch", "create"]'), github.event_name)
     steps:
       - uses: actions/checkout@v4
         with:
